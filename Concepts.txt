@@ -174,3 +174,14 @@ Objects vs Primitives vs Functions
 
 ====================================================================================================================================================
 Notice the difference between insetAdjacentHTML, insetAdjacentElement while adding html list items
+
+
+Event Delegation :
+    Event Bubbling : When an event is triggered on an element, the same event is triggered on all of its parent elements all the way upto html element
+    Target Element : The actual element where the event is first triggered
+    Event Delegation : Not set up th handler on original element but to attach it to parent element and handle there and catch it at parent element
+                        and then do whaterver we want to do on the target element
+
+USes of event Delegation:
+1. When we have an element with lots of child elements that we are instered in,
+2. When we want an event handler attached to an element that is not yet  in the DOM when our page is loaded
