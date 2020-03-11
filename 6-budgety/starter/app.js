@@ -27,8 +27,8 @@ var budgetController = (function() {// THis is an immediately invoked function e
     // This contains the total data of all inc and exp along with totals
     var data = {
         allItems : {
-            exp : [],
-            inc : []
+            exp : [],// Array of expense objects
+            inc : [] //Array of income Objects
         },
         totals : {
             exp : 0,
@@ -57,6 +57,18 @@ var budgetController = (function() {// THis is an immediately invoked function e
 
             // Return the new element
             return newItem;
+        },
+        deleteItem  : function (type , id){
+            var ids, index;
+            ids = data.allItems[type].map(function(current){
+                return current.id;
+            });
+
+            index = ids.indexOf(id);
+
+            if(index !== -1) {
+                data.allItems[type].splice(index, 1)
+            }
         },
         calculateBudget : function () {
 
@@ -142,6 +154,10 @@ var UIController = (function() {
             // Insert the HTML into the DOM
             document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
 
+        },
+        deleteListItem : function (selectorID) {
+            var el = document.getElementById(selectorID)
+            el.parentNode.removeChild(el);
         },
         clearFileds : function (){
             var fields, fieldsArray;
@@ -255,14 +271,17 @@ var controller = (function(budgetCtrl, UICtrl) {
         if(itemID){
             splitID = itemID.split('-');
             type = splitID[0];
-            type = splitID[1];
+            ID = parseInt(splitID[1]);
             
 
             // 1. delete the item from the data structre
+            budgetCtrl.deleteItem(type, ID)
 
             // 2. delete the item from the UI
+            UICtrl.deleteListItem(itemID);
 
             // 3. Update and show the new budget
+            updateBudget();
         }
     }
 
