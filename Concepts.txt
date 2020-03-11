@@ -171,3 +171,6 @@ Objects vs Primitives vs Functions
 -> Modules
 -> Key Codes
 -> DRY principle - Don't repeat yourself principle
+
+====================================================================================================================================================
+Notice the difference between insetAdjacentHTML, insetAdjacentElement while adding html list items
