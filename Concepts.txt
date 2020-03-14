@@ -185,3 +185,15 @@ Event Delegation :
 USes of event Delegation:
 1. When we have an element with lots of child elements that we are instered in,
 2. When we want an event handler attached to an element that is not yet  in the DOM when our page is loaded
+====================================================================================================================================================
+ES5 and ES6
+
+Let vs Const 
+    -   Constants are immutable
+    -   variables declared with Let are mutable
+
+    -   variables declared with var are function scoped in ES5
+    -   Variables declared with let, const and var are blocked scoopes in ES6 
+
+    -   In ES6 variables cannot be used before declaration
+    
