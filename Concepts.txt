@@ -196,4 +196,21 @@ Let vs Const
     -   Variables declared with let, const and var are blocked scoopes in ES6 
 
     -   In ES6 variables cannot be used before declaration
+
+
+Strings 
+    1. Template literals -> `
     
+    Example :
+    var firstName = 'John'
+    var lastName = 'Smith'
+    console.log(`His name is ${firstName} {lastName}`)
+
+    2. New String methods
+    StringVariable.startsWith('searchCondition')
+                  .endsWith('')
+                  .includes('')
+                  .repeat(/)
+
+
+Arrow Functions
