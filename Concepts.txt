@@ -214,3 +214,19 @@ Strings
 
 
 Arrow Functions
+    -   By using arrpw functions we can use this keyword, which is not available in normal functions
+
+Destructuring   
+    Example 
+        const [name, age] = ['John', 25];
+        console.log(name);
+        console.log(age);
+
+    => Also works the same way with Objects
+    Example 
+        const Obj = {
+            firstname : 'John',
+            lastname : "Smith'
+        };
+
+        const {firstName, lastName} = Obj
