@@ -230,3 +230,11 @@ Destructuring
         };
 
         const {firstName, lastName} = Obj
+
+    
+Arrays 
+    - In ES5 if we have to convert a nodeList into array we have to call Array.prototype.slice.call(nodeList)
+    - In ES6 we can simply use Array.from(nodeList) 
+
+    - New Loops "For of" and "For in"
+
