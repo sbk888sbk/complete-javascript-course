@@ -238,3 +238,14 @@ Arrays
 
     - New Loops "For of" and "For in"
 
+
+Spread Operator 
+const a = [1,2,3];
+let b = [...a, 4, 5, 6]
+console.log(b) // Result [1, 2, 3, 4, 5, 6]
+
+
+Rest Parameters
+
+
+Default Parameters
