@@ -249,3 +249,22 @@ Rest Parameters
 
 
 Default Parameters
+
+MAP
+- Until ES6 we have to use Objects
+- in maps we can use anything for a key
+- Objects are restricted to strings
+- We can loop maps which we can not do with Objects
+Ex :
+    cont question = new Map()
+    question.set(key, value)
+    question.get(key)
+    question.size()
+    question.delete(key)
+    question.clear()
+    question.has()
+    question.forEach()
+
+Classes
+- Newly added in ES6
+- Similar to JAVA(My opinion)
