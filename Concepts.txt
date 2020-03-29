@@ -268,3 +268,39 @@ Ex :
 Classes
 - Newly added in ES6
 - Similar to JAVA(My opinion)
+
+
+
+---------------------------- End of ES 6---------------------------- 
+
+Asynchronous JavaScript :
+    - Synchronous Script : Instructions are executed one by one in order of writing
+    
+Promises :
+    States :-
+        1. Pending - Before event happens
+        2. Settled - After event happens
+        3. Fulfilled - Result is available
+        4. Rejected - Error occured
+
+    - We can produce and consume promises
+    - Inside a promise we have call back function called "Executor function"
+
+
+Async and Await :
+    - Used to consume promises
+    - Code written inside aync function runs in the backfround
+    - Await can only be used inside an async function
+    - We can not return in async function
+    - But if we have to  write return in async then one way to do is :
+        Async function always automatically returns a resolved value so we can invoke (dot).then method where the async funtion is called
+
+
+AJAX, API : 
+    - Asynchronous JavaScript And Xml
+        ~ (Sending https requests and receiving responses from API) js app running on client 
+
+    - Application Programming Interface
+        ~ Piece of software on server which receives requests and sends back responses to js app
+
+    - Cross Origin Resource Policy COROS:
