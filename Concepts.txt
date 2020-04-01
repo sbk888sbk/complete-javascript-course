@@ -304,3 +304,24 @@ AJAX, API :
         ~ Piece of software on server which receives requests and sends back responses to js app
 
     - Cross Origin Resource Policy COROS:
+
+
+Webpack : 
+    - In webpack there are four concepts:
+        ~ Entry point
+        ~ Output  
+        ~ Loaders 
+        ~ Plugins
+		
+		
+ Commands : We generally insert webpack commands inside scripts of package.json 
+ 
+     "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+	
+Above two commands will bundle the assets and saves them on to the disk
+
+	
+    "start": "webpack-dev-server --mode development --open"
+ 
+ Webpack server is a server that will automatically loads after it dectects any changes in the files. When using this command webpack doesnot really save the bundled files on to the disc hence we cannot see any new files are to be created. Only the two commands will save the files to disc
