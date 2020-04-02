@@ -325,3 +325,10 @@ Above two commands will bundle the assets and saves them on to the disk
     "start": "webpack-dev-server --mode development --open"
  
  Webpack server is a server that will automatically loads after it dectects any changes in the files. When using this command webpack doesnot really save the bundled files on to the disc hence we cannot see any new files are to be created. Only the two commands will save the files to disc
+ 
+ Babel :
+ 
+ - Polyfill
+ 
+ 
+ Axios : Https library
