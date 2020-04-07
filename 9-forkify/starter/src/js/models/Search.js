@@ -1,10 +1,11 @@
 import axios from 'axios';
+// import proxy from '../config';
+const proxy = 'https://cors-anywhere.herokuapp.com/';
 export default class Search{
     constructor(query){
         this.query = query;
     }
     async getResults (query) {
-        const proxy = 'https://cors-anywhere.herokuapp.com/';
         try {
             const res = await axios(`${proxy}http://forkify-api.herokuapp.com/api/search?&q=${this.query}`);
             this.result = res.data.recipes;
