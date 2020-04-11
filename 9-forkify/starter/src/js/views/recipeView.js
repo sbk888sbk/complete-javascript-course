@@ -9,14 +9,15 @@ const formatCount = count => {
     if(count){
         
         // Ex. count = 2.5
-        const [int,dec] = count.toString().split('.').map( el => parseInt(el, 10)); 
+        const newCount = Math.round(count * 10000 ) / 10000
+        const [int,dec] = newCount.toString().split('.').map( el => parseInt(el, 10)); 
 
-        if(!dec) return count;
+        if(!dec) return newCount;
         if(int === 0) {
-            const fr = new Fraction(count);
+            const fr = new Fraction(newCount);
             return `${fr.numerator}/ ${fr.denominator}`;
         } else {
-            const fr = new Fraction(count - int);
+            const fr = new Fraction(newCount - int);
             return `${int} ${fr.numerator}/ ${fr.denominator}`;
         }
     }
@@ -36,7 +37,7 @@ const createIngredient = ingredient => `
     </li>
 `;
 
-export const renderRecipe = recipe => {
+export const renderRecipe =(recipe, isLiked) => {
     const markup = `
  <div class="recipe">
     <figure class="recipe__fig">
@@ -57,8 +58,8 @@ export const renderRecipe = recipe => {
             <svg class="recipe__info-icon">
                 <use href="img/icons.svg#icon-man"></use>
             </svg>
-            <span class="recipe__info-data recipe__info-data--people">4</span>
-            <span class="recipe__info-text"> ${recipe.servings}</span>
+            <span class="recipe__info-data recipe__info-data--people">${recipe.servings}</span>
+            <span class="recipe__info-text"> </span>
 
             <div class="recipe__info-buttons">
                 <button class="btn-tiny btn-decrease">
@@ -76,26 +77,17 @@ export const renderRecipe = recipe => {
         </div>
         <button class="recipe__love">
             <svg class="header__likes">
-                <use href="img/icons.svg#icon-heart-outlined"></use>
+                <use href="img/icons.svg#icon-heart${isLiked? '': '-outlined' }"></use>
             </svg>
         </button>
     </div>
     <div class="recipe__ingredients">
         <ul class="recipe__ingredient-list">
             ${recipe.ingredients.map(el => createIngredient(el)).join('')}
-            <li class="recipe__item">
-                <svg class="recipe__icon">
-                    <use href="img/icons.svg#icon-check"></use>
-                </svg>
-                <div class="recipe__count">1/4</div>
-                <div class="recipe__ingredient">
-                    <span class="recipe__unit">cup</span>
-                    fresh basil, chopped or torn
-                </div>
-            </li>
+
         </ul>
 
-        <button class="btn-small recipe__btn">
+        <button class="btn-small recipe__btn recipe__btn--add">
             <svg class="search__icon">
                 <use href="img/icons.svg#icon-shopping-cart"></use>
             </svg>

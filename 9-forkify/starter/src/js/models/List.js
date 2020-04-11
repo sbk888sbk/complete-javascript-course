@@ -1,4 +1,4 @@
-import {uniqid} from 'uniqid' ;
+var uniqid = require('uniqid');
 export default class List{
     constructor(){
         this.items = [];
