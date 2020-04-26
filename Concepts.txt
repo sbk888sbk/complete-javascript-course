@@ -332,3 +332,15 @@ Above two commands will bundle the assets and saves them on to the disk
  
  
  Axios : Https library
+ ====================================================================================================================================================
+The difference between “require(x)” and “import x” : 
+CommonJS : 
+require | module.exports
+
+ES6 : 
+import | export
+
+Apart from that,
+You can't selectively load only the pieces you need with require but with imports, you can selectively load only the pieces you need. That can save memory.
+
+Loading is synchronous(step by step) for require on the other hand import can be asynchronous(without waiting for previous import) so it can perform a little better than require
