@@ -186,6 +186,153 @@ USes of event Delegation:
 1. When we have an element with lots of child elements that we are instered in,
 2. When we want an event handler attached to an element that is not yet  in the DOM when our page is loaded
 ====================================================================================================================================================
+ES5 and ES6
+
+Let vs Const 
+    -   Constants are immutable
+    -   variables declared with Let are mutable
+
+    -   variables declared with var are function scoped in ES5
+    -   Variables declared with let, const and var are blocked scoopes in ES6 
+
+    -   In ES6 variables cannot be used before declaration
+
+
+Strings 
+    1. Template literals -> `
+    
+    Example :
+    var firstName = 'John'
+    var lastName = 'Smith'
+    console.log(`His name is ${firstName} {lastName}`)
+
+    2. New String methods
+    StringVariable.startsWith('searchCondition')
+                  .endsWith('')
+                  .includes('')
+                  .repeat(/)
+
+
+Arrow Functions
+    -   By using arrpw functions we can use this keyword, which is not available in normal functions
+
+Destructuring   
+    Example 
+        const [name, age] = ['John', 25];
+        console.log(name);
+        console.log(age);
+
+    => Also works the same way with Objects
+    Example 
+        const Obj = {
+            firstname : 'John',
+            lastname : "Smith'
+        };
+
+        const {firstName, lastName} = Obj
+
+    
+Arrays 
+    - In ES5 if we have to convert a nodeList into array we have to call Array.prototype.slice.call(nodeList)
+    - In ES6 we can simply use Array.from(nodeList) 
+
+    - New Loops "For of" and "For in"
+
+
+Spread Operator 
+const a = [1,2,3];
+let b = [...a, 4, 5, 6]
+console.log(b) // Result [1, 2, 3, 4, 5, 6]
+
+
+Rest Parameters
+
+
+Default Parameters
+
+MAP
+- Until ES6 we have to use Objects
+- in maps we can use anything for a key
+- Objects are restricted to strings
+- We can loop maps which we can not do with Objects
+Ex :
+    cont question = new Map()
+    question.set(key, value)
+    question.get(key)
+    question.size()
+    question.delete(key)
+    question.clear()
+    question.has()
+    question.forEach()
+
+Classes
+- Newly added in ES6
+- Similar to JAVA(My opinion)
+
+
+
+---------------------------- End of ES 6---------------------------- 
+
+Asynchronous JavaScript :
+    - Synchronous Script : Instructions are executed one by one in order of writing
+    
+Promises :
+    States :-
+        1. Pending - Before event happens
+        2. Settled - After event happens
+        3. Fulfilled - Result is available
+        4. Rejected - Error occured
+
+    - We can produce and consume promises
+    - Inside a promise we have call back function called "Executor function"
+
+
+Async and Await :
+    - Used to consume promises
+    - Code written inside aync function runs in the backfround
+    - Await can only be used inside an async function
+    - We can not return in async function
+    - But if we have to  write return in async then one way to do is :
+        Async function always automatically returns a resolved value so we can invoke (dot).then method where the async funtion is called
+
+
+AJAX, API : 
+    - Asynchronous JavaScript And Xml
+        ~ (Sending https requests and receiving responses from API) js app running on client 
+
+    - Application Programming Interface
+        ~ Piece of software on server which receives requests and sends back responses to js app
+
+    - Cross Origin Resource Policy COROS:
+
+
+Webpack : 
+    - In webpack there are four concepts:
+        ~ Entry point
+        ~ Output  
+        ~ Loaders 
+        ~ Plugins
+		
+		
+ Commands : We generally insert webpack commands inside scripts of package.json 
+ 
+     "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+	
+Above two commands will bundle the assets and saves them on to the disk
+
+	
+    "start": "webpack-dev-server --mode development --open"
+ 
+ Webpack server is a server that will automatically loads after it dectects any changes in the files. When using this command webpack doesnot really save the bundled files on to the disc hence we cannot see any new files are to be created. Only the two commands will save the files to disc
+ 
+ Babel :
+ 
+ - Polyfill
+ 
+ 
+ Axios : Https library
+====================================================================================================================================================
 The difference between “require(x)” and “import x” : 
 CommonJS : 
 require | module.exports
