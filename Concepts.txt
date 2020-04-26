@@ -332,7 +332,7 @@ Above two commands will bundle the assets and saves them on to the disk
  
  
  Axios : Https library
- ====================================================================================================================================================
+
 The difference between “require(x)” and “import x” : 
 CommonJS : 
 require | module.exports
