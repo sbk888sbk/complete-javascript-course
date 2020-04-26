@@ -9,6 +9,64 @@
 <body>
     <h1>Asynchronous JavaScript</h1>
     <script>
+
+        // function getReceipe() {
+        //     setTimeout(() => {
+        //         const recipeID = [523, 838, 432, 974];
+        //         console.log(recipeID)
+
+        //         setTimeout((id) => {
+        //             const recipe = {title : 'Fresh tomato pasta', publisher : 'SBK'};
+        //             console.log(`${id} : ${recipe.title}`); 
+        //         },1000, recipeID[2])
+        //     },1500)
+        // }
+        // getReceipe()
+        
+
+        // const getIDs = new Promise((resolve, reject) => {
+        //    setTimeout(() => {
+        //     resolve([523, 838, 432, 974]);
+        //    },1500)
+        // });
+
+        // const getReceipe = recID => {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(id => {
+        //             const recipe = {title : 'Fresh tomato pasta', publisher : 'SBK'};
+        //             resolve(`${id} : ${recipe.title}`);
+        //         }, 1500, recID)
+        //     });
+        // }
+
+        // getIDs
+        // .then( IDs => {
+        //     console.log(IDs);
+        //     return getReceipe(IDs[2]);
+            
+        // })
+        // .then(recipe => {
+        //     console.log(recipe);
+        // })
+        // .catch(error => {
+        //     console.log('error')
+        // });
+
+
+        // async function getReceipeAW() {
+        //     const IDs = await getIDs;
+        //     console.log(IDs);
+        //     const recipe = await getReceipe(IDs[2]);
+        //     console.log(recipe)
+        //     return recipe
+        // }
+        // getReceipeAW().then(result => {
+        //     console.log(result,"okok")
+
+        // }
+        // );
+
+        fetch('https://www.metaweather.com/api/location/2487956/');
         
     </script>
 </body>
