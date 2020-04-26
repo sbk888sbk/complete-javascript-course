@@ -185,3 +185,15 @@ Event Delegation :
 USes of event Delegation:
 1. When we have an element with lots of child elements that we are instered in,
 2. When we want an event handler attached to an element that is not yet  in the DOM when our page is loaded
+====================================================================================================================================================
+The difference between “require(x)” and “import x” : 
+CommonJS : 
+require | module.exports
+
+ES6 : 
+import | export
+
+Apart from that,
+You can't selectively load only the pieces you need with require but with imports, you can selectively load only the pieces you need. That can save memory.
+
+Loading is synchronous(step by step) for require on the other hand import can be asynchronous(without waiting for previous import) so it can perform a little better than require
